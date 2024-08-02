@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>dialog要素を使用した簡単なモーダル</title>
+	<link rel="stylesheet" href="./css/style.css" />
+	<script src="./js/script.js" defer></script>
+</head>
+
+<body>
+	<h1>dialog要素を使用した簡単なモーダル</h1>
+
+	<button type="button" data-modal-open="modal1">モーダル1を開く</button>
+	<dialog id="modal1" class="modal" data-modal autofocus>
+		<div class="modal-container" data-modal-container>
+			<button type="button" data-modal-close>閉じる</button>
+			<h2>モーダル1の中身</h2>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis velit
+				labore aut laudantium assumenda, dicta saepe voluptatum quo corporis
+				similique? Nisi laborum exercitationem aliquam hic quidem maiores quos
+				modi quam?
+			</p>
+		</div>
+	</dialog>
+
+	<button type="button" data-modal-open="modal2">モーダル2を開く</button>
+	<dialog id="modal2" class="modal" data-modal autofocus>
+		<div class="modal-container" data-modal-container>
+			<button type="button" data-modal-close>閉じる</button>
+			<h2>モーダル2の中身</h2>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis velit
+				labore aut laudantium assumenda, dicta saepe voluptatum quo corporis
+				similique? Nisi laborum exercitationem aliquam hic quidem maiores quos
+				modi quam?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+		</div>
+	</dialog>
+
+	<button type="button" data-modal-open="modal3">モーダル3を開く</button>
+	<dialog id="modal3" class="modal" data-modal autofocus>
+		<div class="modal-container" data-modal-container>
+			<button type="button" data-modal-close>閉じる</button>
+			<h2>モーダル3の中身</h2>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis velit
+				labore aut laudantium assumenda, dicta saepe voluptatum quo corporis
+				similique? Nisi laborum exercitationem aliquam hic quidem maiores quos
+				modi quam?
+			</p>
+		</div>
+	</dialog>
+
+	<h2 style="margin-top: 100px">
+		モーダル内で前後のモーダルに切り替えることができるver
+	</h2>
+	<button type="button" data-modal-open="modal4">モーダル4を開く</button>
+	<dialog id="modal4" class="modal" data-modal autofocus>
+		<div class="modal-container" data-modal-container>
+			<button type="button" data-modal-close>閉じる</button>
+			<h2>モーダル4の中身</h2>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis velit
+				labore aut laudantium assumenda, dicta saepe voluptatum quo corporis
+				similique? Nisi laborum exercitationem aliquam hic quidem maiores quos
+				modi quam?
+			</p>
+			<button type="button" data-modal-prev="modal6">前へ</button>
+			<button type="button" data-modal-next="modal5">次へ</button>
+		</div>
+	</dialog>
+
+	<button type="button" data-modal-open="modal5">モーダル5を開く</button>
+	<dialog id="modal5" class="modal" data-modal autofocus>
+		<div class="modal-container" data-modal-container>
+			<button type="button" data-modal-close>閉じる</button>
+			<h2>モーダル5の中身</h2>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis velit
+				labore aut laudantium assumenda, dicta saepe voluptatum quo corporis
+				similique? Nisi laborum exercitationem aliquam hic quidem maiores quos
+				modi quam?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at
+				eius reiciendis modi iusto officia doloremque quos incidunt aspernatur
+				ducimus fugit maxime maiores laudantium, odit ratione possimus nam
+				suscipit porro?
+			</p>
+			<button type="button" data-modal-prev="modal4">前へ</button>
+			<button type="button" data-modal-next="modal6">次へ</button>
+		</div>
+	</dialog>
+
+	<button type="button" data-modal-open="modal6">モーダル6を開く</button>
+	<dialog id="modal6" class="modal" data-modal autofocus>
+		<div class="modal-container" data-modal-container>
+			<button type="button" data-modal-close>閉じる</button>
+			<h2>モーダル6の中身</h2>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis velit
+				labore aut laudantium assumenda, dicta saepe voluptatum quo corporis
+				similique? Nisi laborum exercitationem aliquam hic quidem maiores quos
+				modi quam?
+			</p>
+			<button type="button" data-modal-prev="modal5">前へ</button>
+			<button type="button" data-modal-next="modal4">次へ</button>
+		</div>
+	</dialog>
+
+	<div style="margin-top: 300px; height: 1000px">
+		<p>モーダルを開いているとき、下の要素にフォーカスがあたらないか確認</p>
+		<button>ボタン</button>
+		<a href="">リンク</a>
+	</div>
+</body>
+
+</html>

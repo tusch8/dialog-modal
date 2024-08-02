@@ -1,0 +1,75 @@
+:where(dialog) {
+  position: static;
+  width: auto;
+  max-width: none;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+dialog::-ms-backdrop {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+
+.modal {
+  --duration: 0.3s;
+  -webkit-transition: opacity var(--duration);
+  transition: opacity var(--duration);
+}
+.modal::-ms-backdrop {
+  -ms-transition: opacity var(--duration);
+  transition: opacity var(--duration);
+}
+.modal::backdrop {
+  -webkit-transition: opacity var(--duration);
+  transition: opacity var(--duration);
+}
+.modal.is-open, .modal.is-close {
+  opacity: 0;
+}
+.modal.is-open::-ms-backdrop, .modal.is-close::-ms-backdrop {
+  opacity: 0;
+}
+.modal.is-open::backdrop, .modal.is-close::backdrop {
+  opacity: 0;
+}
+.modal.is-open .modal-container, .modal.is-close .modal-container {
+  scale: 0.95;
+}
+
+.modal-container {
+  position: absolute;
+  width: min(100% - 6em, 1000px);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 80vh;
+  margin: auto;
+  padding: 3em;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+  -webkit-transition: scale var(--duration);
+  transition: scale var(--duration);
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain;
+  inset: 0;
+  scale: 1;
+}

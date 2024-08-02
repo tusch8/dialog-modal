@@ -1,0 +1,63 @@
+// dialogのスタイルををリセット
+:where(dialog) {
+	position: static;
+	width: auto;
+	max-width: none;
+	height: auto;
+	max-height: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+}
+
+// dialogが開いているときに背景固定
+body:has(dialog[open]) {
+	overflow: hidden;
+}
+
+// 背景部分
+dialog::backdrop {
+	background: rgb(0 0 0 / 0.7);
+	backdrop-filter: blur(3px);
+}
+
+// モーダル全体
+.modal {
+	--duration: 0.3s;
+	transition: opacity var(--duration);
+	&::backdrop {
+		transition: opacity var(--duration);
+	}
+
+	// モーダルを表示する前後のスタイル
+	&.is-open,
+	&.is-close {
+		opacity: 0;
+		&::backdrop {
+			opacity: 0;
+		}
+		.modal-container {
+			scale: 0.95;
+		}
+	}
+}
+
+// モーダル本体
+.modal-container {
+	position: absolute;
+	width: min(calc(100% - calc(3em * 2)), 1000px);
+	height: fit-content;
+	max-height: 80vh;
+	margin: auto;
+	padding: 3em;
+	overflow: auto;
+	box-sizing: border-box;
+	background: #fff;
+	transition: scale var(--duration);
+	overscroll-behavior: contain;
+	inset: 0;
+	scale: 1;
+}
